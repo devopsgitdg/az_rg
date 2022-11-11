@@ -5,7 +5,7 @@
   
 
 resource "azurerm_resource_group" "rg-wkspc" {
-  /* count = 1 */
+  
    provisioner "local-exec" {
     command = "az group list --query \"{ResourceGroup: '${local.naming_convention.name}'}\""
    
