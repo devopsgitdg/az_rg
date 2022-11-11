@@ -1,0 +1,14 @@
+# Ignore settings for various IDEs.
+ 
+.vscode
+
+# Terraform
+.terraform/
+terraform.tfstate
+terraform.tfstate.*
+*.plan
+# terraform.tfstate.*.backup
+*bak*
+.terraform.lock.hcl
+
+new_b
