@@ -1,0 +1,40 @@
+#!/bin/bash 
+
+# repo=$1
+
+# gh repo fork $repo --clone=true
+newbranch=$1
+git branch -M feature/$newbranch
+#repodir=$(ls -lt .git/refs/heads | tail -n +2 | head -1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#newbranch=$2
+
+# if [ ! -z "$2" ]
+# then
+#     t=$(echo $repodir | awk '{print $NF}' | tr -d '\r')
+#     cd $t
+#     exec bash 	
+#     git branch -M feature/$newbranch
+#     git status
+# else
+#   echo "No branch name provided"
+# fi
