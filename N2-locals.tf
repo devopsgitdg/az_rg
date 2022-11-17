@@ -18,7 +18,7 @@ locals {
         resource = var.resource_type
         subscription = var.subs
         account = var.account_domain_identifier
-        name = "${var.resource_type[0]}-${var.subs[0]}-${var.account_domain_identifier[0]}-${local.env_designation.poc[1]}"
+        name = "${var.resource_type[0]}-${var.subs[0]}-${var.account_domain_identifier[0]}"
         
   }
 

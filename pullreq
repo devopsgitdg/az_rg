@@ -1,0 +1,8 @@
+#!/bin/bash 
+
+# repo=$1
+ 
+# newbranch=$1
+gh pr create
+ 
+

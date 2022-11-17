@@ -37,5 +37,5 @@ variable "last_number" {
 }
 
 variable "name" {
-  default = "rg-entprod-mat-001"
+  default = ""
 }
