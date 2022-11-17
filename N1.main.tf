@@ -11,9 +11,8 @@ resource "azurerm_resource_group" "rg-wkspc" {
    
   }
   
-  name     = (var.name == "local.naming_convention.name") ? local.naming_convention.name :  trimprefix(format("%0s%03d", local.naming_convention.name, 2), local.naming_convention.name)
+  name     = (var.name == "local.naming_convention.name") ? local.naming_convention.name : "${local.naming_convention.name}${format("-%03d", count.index + 1)}" 
   location = var.resource_group_location
-
   
 }
 

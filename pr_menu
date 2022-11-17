@@ -1,0 +1,104 @@
+#!/bin/bash 
+
+
+
+
+function list_pr() {
+    echo ""
+	echo "List PR: "
+	gh pr list
+	echo ""
+}
+
+function view_pr() {
+    echo ""
+	echo "view pr: "
+    echo ""
+	gh pr view
+    echo ""
+}
+
+# function add_comments_pr() {
+#     echo ""
+# 	echo "TCP connections on ${server_name}: "
+#     echo ""
+# 	cat  /proc/net/tcp | wc -l
+#     echo ""
+# }
+
+function rev_approve_pr() {
+    echo ""
+	echo "Review and approve PR: "
+	echo ""
+	gh pr review --approve
+    echo ""
+}
+
+
+function merge_pr() {
+    echo ""
+	echo "Merge Pr: "
+	echo ""
+	gh pr merge
+    echo ""
+}
+##
+# Color  Variables
+##
+green='\e[32m'
+blue='\e[34m'
+clear='\e[0m'
+
+##
+# Color Functions
+##
+
+ColorGreen(){
+	echo -ne $green$1$clear
+}
+ColorBlue(){
+	echo -ne $blue$1$clear
+}
+
+menu(){
+echo -ne "
+Work Flow Menu
+$(ColorGreen '1)') List PR
+$(ColorGreen '2)') View PR
+$(ColorGreen '3)') Add Comments PR
+$(ColorGreen '4)') Approve PR
+$(ColorGreen '5)') Review and Approve PR  
+$(ColorGreen '6)') Merge PR
+$(ColorGreen '0)') Exit
+$(ColorBlue 'Choose an option:') "
+        read a
+        case $a in
+	        1) list_pr; menu ;;
+	        2) view_pr; menu ;;
+	        3) add_comments_pr; menu ;;
+	        4) approve_pr; menu ;;
+			5) rev_approve_pr; menu ;;
+	        6) merge_pr; menu ;;
+			0) exit 0 ;;
+			*) echo -e $red"Wrong option."$clear; WrongCommand;;
+        esac
+}
+
+menu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
